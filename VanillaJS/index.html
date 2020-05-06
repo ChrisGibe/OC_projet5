@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Générateur de citations</title>
+
+		<!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <!-- Personnal CSS-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="title">
+				<div class="col-lg-12">
+					<h1>Générateur de citations Kamelott</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<h5>Choisissez un auteur</h5>
+						<select class="form-control form-control-lg" id="autorSelect">
+				  			<option value="perceval">Perceval, chevalier de la table ronde</option>
+				  			<option value="karadoc">Karadoc, chevalier de la table ronde</option>
+						</select>	
+				</div>
+				<div class="col-lg-6">
+					<h5>Combien voulez-vous de citations ? </h5>
+					<div class="form-check form-check-inline" id="inlineRadio">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked>
+						  <label class="form-check-label" for="inlineRadio1">1</label>
+					</div>
+					<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" required>
+						  <label class="form-check-label" for="inlineRadio2">2</label>
+					</div>
+					<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" required>
+						  <label class="form-check-label" for="inlineRadio3">3</label>
+					</div>
+					<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4" required>
+						  <label class="form-check-label" for="inlineRadio4">4</label>
+					</div>
+					<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5" required>
+						  <label class="form-check-label" for="inlineRadio5">5</label>
+					</div>
+				</div>
+			</div>
+			<div class="row"  id="divBoutton1">
+				<div class="col-lg-12">
+					<button onclick="creationQuotes()" type="button" class="btn btn-secondary btn-lg" id="generate">Générer</button>
+				</div>
+			</div>
+			<div class="row"  id="divBoutton2">
+				<div class="col-lg-12">
+					<button onclick="removeQuotes()" type="button" class="btn btn-secondary btn-lg" id="reset">Recommencer</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12" id="citationsBloque">
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

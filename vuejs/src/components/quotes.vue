@@ -28,9 +28,14 @@
 </template>
 
 <script>
+import * as data from '../assets/quotes.json';
+
 export default {
   name: 'Quotes',
 };
+const { name } = data;
+// eslint-disable-next-line
+console.log(name);
 </script>
 
 <style scoped>

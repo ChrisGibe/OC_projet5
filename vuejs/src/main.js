@@ -1,8 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-Vue.config.productionTip = false
+const axios = require('axios').default;
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  mounted() {
+    axios
+      .get('https://projet7oc.com/data.json')
+      // eslint-disable-next-line
+      .then((response) => (console.log(this.data = response)));
+  },
+  render: (h) => h(App),
+}).$mount('#app');

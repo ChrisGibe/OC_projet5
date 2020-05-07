@@ -1,19 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header title="Génarateur de citations : Version VueJS"/>
+    <Select auteur_1="Perceval, chevalier de la table ronde"
+            auteur_2="Karadoc, chevalier de la table ronde"/>
+    <Checkbox/>
+    <Quotes/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/header.vue';
+import Select from './components/select.vue';
+import Checkbox from './components/checkbox.vue';
+import Quotes from './components/quotes.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Select,
+    Checkbox,
+    Quotes,
+  },
+};
 </script>
 
 <style>

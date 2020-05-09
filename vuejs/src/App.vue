@@ -1,33 +1,49 @@
 <template>
   <div id="app">
     <Header title="Génarateur de citations : Version VueJS"/>
-    <Select auteur_1="Perceval, chevalier de la table ronde"
-            auteur_2="Karadoc, chevalier de la table ronde"/>
-    <Checkbox/>
-    <Quotes/>
+    <div class="block-1">
+      <SelectItem/>
+      <Checkbox/>
+    </div>
+    <Buttons/>
   </div>
 </template>
 
 <script>
 import Header from './components/header.vue';
-import Select from './components/select.vue';
+import SelectItem from './components/select.vue';
 import Checkbox from './components/checkbox.vue';
-import Quotes from './components/quotes.vue';
+import Buttons from './components/buttons.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Select,
+    SelectItem,
     Checkbox,
-    Quotes,
+    Buttons,
   },
 };
 </script>
 
 <style>
+html {
+  background-color: #d5ddeb;
+}
+
+body {
+  margin: 0;
+  background-color: #d5ddeb;
+  width: 100%;
+  height: 100vh;
+}
+
+.block-1 {
+  display: flex;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Open, sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

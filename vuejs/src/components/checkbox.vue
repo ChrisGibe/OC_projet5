@@ -5,19 +5,19 @@
     </div>
     <div id="inlineRadio">
       <label class="checkbox-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked />1
+        <input type="radio" name="inlineRadioOptions" value="1" checked />1
       </label>
       <label class="checkbox-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" required />2
+        <input type="radio" name="inlineRadioOptions" value="2" required />2
       </label>
       <label class="checkbox-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" required />3
+        <input type="radio" name="inlineRadioOptions" value="3" required />3
       </label>
       <label class="checkbox-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4" required />4
+        <input type="radio" name="inlineRadioOptions" value="4" required />4
       </label>
       <label class="checkbox-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5" required />5
+        <input type="radio" name="inlineRadioOptions" value="5" required />5
       </label>
     </div>
   </div>
@@ -32,7 +32,6 @@ export default {
 <style scoped>
 .container {
   display: block;
-  float: left;
   width: 50%;
   height: auto;
 }

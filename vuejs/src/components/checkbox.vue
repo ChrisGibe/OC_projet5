@@ -65,7 +65,7 @@ input[type=radio] {
 }
 
 input[type="radio"]:checked {
-  background-color: #000;
+  background-color: #2c3e50;
   transition-duration: 400ms;
 }
 

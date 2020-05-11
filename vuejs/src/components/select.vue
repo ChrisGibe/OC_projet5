@@ -41,15 +41,6 @@ select {
   padding: 15px;
 }
 
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
 @media screen and (max-width: 800px) {
   .container {
     display: block;

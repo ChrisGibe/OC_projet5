@@ -6,7 +6,7 @@
           type="button"
           class="button"
           id="generate"
-          @click="generateQuotes()"
+          @click="addNewQuotes()"
         >
           Générer
         </button>
@@ -24,52 +24,56 @@
         </button>
       </div>
     </div>
-    <div id="citationsBloque"></div>
+    <ul id="QuotesListe">
+      <li
+        v-for="(quote) in quotes"
+        v-bind:key="quote.id"
+        v-text="quote.text"
+      ></li>
+    </ul>
   </div>
 </template>
 
-<script>
+<script scoped>
 const allQuotes = require('../assets/quotes.json');
 
 export default {
   name: 'Buttons',
+  data() {
+    return {
+      newQuoteText: '',
+      nextQuoteId: 0,
+      quotes: [],
+    };
+  },
   methods: {
-    generateQuotes() {
+    addNewQuotes() {
       const inputs = document.querySelector('input[type=radio]:checked');
 
       function randomQuote(array) {
         return array[Math.floor(Math.random() * array.length)];
       }
 
-      function createBlocksQuote() {
-        for (let i = 0; i < inputs.value; i += 1) {
-          const citationsBloque = document.getElementById('citationsBloque');
-          const block = document.createElement('blockquote');
-          const paragraph = document.createElement('p');
+      for (let i = 0; i < inputs.value; i += 1) {
+        const autorSelected = document.querySelector('#autorSelect').value;
 
-          paragraph.id = `citation${i}`;
-
-          citationsBloque.appendChild(block);
-          block.appendChild(paragraph);
-
-          const autorSelected = document.querySelector('#autorSelect').value;
-
-          if (autorSelected === 'perceval') {
-            document.getElementById(`citation${i}`).innerHTML = `${randomQuote(
-              allQuotes.perceval[1],
-            )} ${randomQuote(allQuotes.perceval[2])} ${randomQuote(
-              allQuotes.perceval[3],
-            )}`;
-          } else if (autorSelected === 'karadoc') {
-            document.getElementById(`citation${i}`).innerHTML = `${randomQuote(
-              allQuotes.karadoc[1],
-            )} ${randomQuote(allQuotes.karadoc[2])} ${randomQuote(allQuotes.karadoc[3])}`;
-          }
+        if (autorSelected === 'perceval') {
+          this.newQuoteText = `${randomQuote(
+            allQuotes.perceval[1],
+          )} ${randomQuote(allQuotes.perceval[2])} ${randomQuote(
+            allQuotes.perceval[3],
+          )}`;
+        } else if (autorSelected === 'karadoc') {
+          this.newQuoteText = `${randomQuote(
+            allQuotes.karadoc[1],
+          )} ${randomQuote(allQuotes.karadoc[2])} ${randomQuote(allQuotes.karadoc[3])}`;
         }
+
+        this.quotes.push({
+          id: this.nextQuoteId += 1,
+          text: this.newQuoteText,
+        });
       }
-
-      createBlocksQuote();
-
       document.body.height = '100%';
       document.getElementById('divBoutton1').style.display = 'none';
       document.getElementById('divBoutton2').style.display = 'block';
@@ -78,11 +82,8 @@ export default {
       document.getElementById('divBoutton1').style.display = 'block';
       document.getElementById('divBoutton2').style.display = 'none';
 
-      const citationsBloque = document.getElementById('citationsBloque');
-      const resetBlock = document.querySelectorAll('#citationsBloque blockquote');
-
-      for (let i = 0, r = resetBlock.length; i < r; i += 1) {
-        citationsBloque.removeChild(resetBlock[i]);
+      for (let i = 0; i < this.quotes.length; i += 1) {
+        this.quotes.splice(0);
       }
     },
   },
@@ -97,10 +98,6 @@ export default {
 
 #divBoutton2 {
     display: none;
-}
-
-#citationbloque {
-    display: block;
 }
 
 .button {
@@ -127,8 +124,13 @@ export default {
   top: 2px;
 }
 
+#QuotesListe {
+  padding-left: 0;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
-blockquote {
+li {
+  list-style-type: none;
   width: 60%;
   height: auto;
   font-size: 1.2em;
@@ -143,7 +145,7 @@ blockquote {
   background:#EDEDED;
 }
 
-blockquote::before{
+li::before{
   font-family:Arial;
   content: "\201C";
   color:#78C0A8;

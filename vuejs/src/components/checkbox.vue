@@ -41,11 +41,7 @@ h2 {
   margin-bottom: 40px;
 }
 
-.checkbox-inline {
-  margin: 10px;
-}
-
-.radio-inline {
+label {
   margin: 10px;
 }
 
@@ -53,6 +49,7 @@ input[type=radio] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
+    margin-right: 2px;
 }
 
 input[type=radio] {
@@ -62,6 +59,7 @@ input[type=radio] {
     width: 15px;
     background: #fff;
     border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px #929090;
 }
 
 input[type="radio"]:checked {

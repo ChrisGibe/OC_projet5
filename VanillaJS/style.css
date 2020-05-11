@@ -1,70 +1,144 @@
-body , html {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: bold;
-	background-color: #b7b7b7;
-}
-.row {
-	padding-bottom: 40px;
+body,
+html {
+  color: #2c3e50;
+  font-family: Open, sans;
+  background-color: #d5ddeb;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
+.row {
+  padding-bottom: 40px;
+}
+
+.col-lg-6 {
+  display: grid;
+  justify-content: center;
+}
 
 #title {
-	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 80px;
+  text-align: center;
+  padding-bottom: 80px;
 }
+
 h1 {
-	font-size: 3em;
-	font-weight: bold;
+  font-size: 3em;
+  font-weight: bold;
 }
 
-h5 {
-	font-size: 1.8em;
-	font-weight: bold;
+h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+img {
+  width: 10%;
 }
 
 .form-check-inline {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 #autorSelect {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
+select {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px #929090;
+  color: #2c3e50;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.checkbox-inline {
+  margin: 10px;
+}
+
+.radio-inline {
+  margin: 10px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  border-radius: 4px;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 5px 5px #929090;
+  margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+  background-color: #2c3e50;
+  transition-duration: 400ms;
+}
 
 #divBoutton1 {
-	text-align: center;
+  text-align: center;
 }
 
 #divBoutton2 {
-	display: none;
-	text-align: center;
+  display: none;
+  text-align: center;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+.button {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px #929090;
+  color: #2c3e50;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button:hover {
+  box-shadow: 0 2px #929090;
+  top: 2px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open + Sans:400italic);
 #citationsBloque > blockquote {
   font-size: 1.4em;
-  margin:50px auto;
-  font-family:Open Sans;
-  font-style:italic;
+  margin: 50px auto;
+  font-family: Open Sans;
+  font-style: italic;
   color: #555555;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #78C0A8 ;
-  line-height:1.6;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #78c0a8;
+  line-height: 1.6;
   position: relative;
-  background:#EDEDED;
+  background: #ededed;
 }
 
-#citationsBloque > blockquote::before{
-  font-family:Arial;
+#citationsBloque > blockquote::before {
+  font-family: Arial;
   content: "\201C";
-  color:#78C0A8;
-  font-size:4em;
+  color: #78c0a8;
+  font-size: 4em;
   position: absolute;
   left: 10px;
-  top:-10px;
+  top: -10px;
 }
-
-
-

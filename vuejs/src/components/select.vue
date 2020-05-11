@@ -18,7 +18,9 @@ export default {
 
 <style scoped>
 .container {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
   width: 50%;
   height: auto;
 }
@@ -50,6 +52,8 @@ select {
 
 @media screen and (max-width: 800px) {
   .container {
+    display: block;
+    padding-right: 0;
     width: 100%;
   }
 }

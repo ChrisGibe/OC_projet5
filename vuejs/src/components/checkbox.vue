@@ -1,22 +1,20 @@
 <template>
   <div class="container">
-    <div>
-      <h2>Combien voulez-vous de citations ?</h2>
-    </div>
     <div id="inlineRadio">
-      <label class="checkbox-inline">
+      <h2>Nombre de citations</h2>
+      <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" value="1" checked />1
       </label>
-      <label class="checkbox-inline">
+      <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" value="2" required />2
       </label>
-      <label class="checkbox-inline">
+      <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" value="3" required />3
       </label>
-      <label class="checkbox-inline">
+      <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" value="4" required />4
       </label>
-      <label class="checkbox-inline">
+      <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" value="5" required />5
       </label>
     </div>
@@ -31,18 +29,50 @@ export default {
 
 <style scoped>
 .container {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
   width: 50%;
   height: auto;
 }
 
-h5 {
+h2 {
   font-size: 1.8em;
-  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.checkbox-inline {
+  margin: 10px;
+}
+
+.radio-inline {
+  margin: 10px;
+}
+
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=radio] {
+    cursor: pointer;
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"]:checked {
+  background-color: #000;
+  transition-duration: 400ms;
 }
 
 @media screen and (max-width: 800px) {
   .container {
+    display: block;
+    padding-left: 0;
     width: 100%;
   }
 }

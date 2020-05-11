@@ -60,6 +60,7 @@ input[type=radio] {
     background: #fff;
     border: 1px solid #ccc;
     box-shadow: 2px 5px 5px #929090;
+    margin-right: 5px;
 }
 
 input[type="radio"]:checked {

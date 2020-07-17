@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    width: 50%;
+    height: auto;
+}
+  
+h2 {
+    font-size: 1.8em;
+}
+  
+select {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #929090;
+    color: #2c3e50;
+    cursor: pointer;
+    font-family: inherit;
+    font-size:18px;
+    font-weight: 700;
+    padding: 15px;
+}
+  
+@media screen and (max-width: 800px) {
+    .container {
+      display: block;
+      padding-right: 0;
+      width: 100%;
+    }
+}
